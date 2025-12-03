@@ -32,7 +32,7 @@ const MainLayout = () => {
 
         <Link to="works" offset={-10} containerId="scroll-container" spy={true} activeClass='bg-[#000000]' className="flex flex-col items-center justify-center cursor-pointer hover:bg-[#000000] h-[17vh]">
           <FontAwesomeIcon icon={faBriefcase} className="text-[2rem] mb-2" />
-          Works
+          Projects
         </Link>
 
         <Link to="contact" offset={-10} containerId="scroll-container" spy={true} activeClass='bg-[#000000]' className="flex flex-col items-center justify-center cursor-pointer hover:bg-[#000000] h-[17vh]">

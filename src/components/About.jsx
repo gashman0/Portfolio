@@ -102,7 +102,7 @@ const About = () => {
           </div>
 
           <div className='flex justify-center items-center h-[16vh] bg-[#818181] group-hover:bg-[#ababab]'>
-            <button className='text-black text-[1.2rem] px-6 py-3 bg-[#919191] cursor-pointer group-hover:bg-[#ebebeb]'>Sign up</button>
+            <button className='text-black text-[1.2rem] px-6 py-3 bg-[#919191] cursor-pointer group-hover:bg-[#ebebeb] hover:bg-black hover:text-white'>Sign up</button>
           </div>
         </div>
 
@@ -124,7 +124,7 @@ const About = () => {
           </div>
 
           <div className='flex justify-center items-center h-[16vh] bg-[#818181] group-hover:bg-[#ababab]'>
-            <button className='text-black text-[1.2rem] px-6 py-3 bg-[#919191] cursor-pointer group-hover:bg-[#ebebeb]'>Sign up</button>
+            <button className='text-black text-[1.2rem] px-6 py-3 bg-[#919191] cursor-pointer group-hover:bg-[#ebebeb] hover:bg-black hover:text-white'>Sign up</button>
           </div>
         </div>
       </div>
