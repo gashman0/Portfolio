@@ -1,139 +1,167 @@
-import React from 'react';
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
   return (
-    <div name="about" className='h-fit text-[#ffffff] pt-10 overflow-hidden' >
-      <p className='text-[3rem] text-[#f1f1f1] py-8'>Agashi Victor Tochukwu</p>
-
-      <hr className='w-[40%] pb-8'/>
-
-
-      <p className='text-justify text-[2rem] text-[#ebebeb]'>
-        Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod 
-        tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
-        laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <div
+      name="about"
+      className="text-white px-6 lg:px-12 pt-16 overflow-hidden"
+    >
+      {/* Name */}
+      <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] text-[#f1f1f1] mb-6">
+        Agashi Victor Tochukwu
       </p>
 
-      <p className='text-[3rem] text-[#f1f1f1] pt-8'>My Skill</p>
+      <hr className="w-32 sm:w-48 mb-8" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-        <div>
-          <p className="text-[#ebebeb] text-[1.8rem]">JavaScript</p>
-          <div className="bg-[#414141] h-[2.5vh]">
-            <div className="bg-[#919191] h-full w-[82%] "></div>
-          </div>
-        </div>
+      {/* About text */}
+      <p className="text-justify text-base sm:text-lg md:text-xl lg:text-[2rem] text-[#ebebeb] leading-relaxed">
+        Some text about me. Some text about me. I am lorem ipsum consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+        qui officia deserunt mollit anim id est laborum consectetur adipiscing
+        elit.
+      </p>
 
-        <div>
-          <p className="text-[#ebebeb] text-[1.8rem]">TypeScript</p>
-          <div className="bg-[#414141] h-[2.5vh]">
-            <div className="bg-[#919191] h-full w-[60%]"></div>
-          </div>
-        </div>
+      {/* Skills */}
+      <p className="text-2xl sm:text-3xl lg:text-[3rem] text-[#f1f1f1] mt-12 mb-6">
+        My Skills
+      </p>
 
-        <div>
-          <p className="text-[#ebebeb] text-[1.8rem]">React</p>
-          <div className="bg-[#414141] h-[2.5vh]">
-            <div className="bg-[#919191] h-full w-[70%]"></div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {[
+          { name: "JavaScript", value: "82%" },
+          { name: "TypeScript", value: "60%" },
+          { name: "React", value: "70%" },
+          { name: "HTML, CSS, Tailwind", value: "90%" },
+          { name: "Git & GitHub", value: "50%" },
+        ].map((skill) => (
+          <div key={skill.name}>
+            <p className="text-[#ebebeb] text-sm sm:text-base md:text-lg mb-2">
+              {skill.name}
+            </p>
+            <div className="bg-[#414141] h-3 sm:h-4">
+              <div
+                className="bg-[#919191] h-full"
+                style={{ width: skill.value }}
+              />
+            </div>
           </div>
-        </div>
-
-        <div>
-          <p className="text-[#ebebeb] text-[1.8rem]">HTML, CSS, Tailwind</p>
-          <div className="bg-[#414141] h-[2.5vh]">
-            <div className="bg-[#919191] h-full w-[90%]"></div>
-          </div>
-        </div>
-
-        <div>
-          <p className="text-[#ebebeb] text-[1.8rem]">Git & GitHub</p>
-          <div className="bg-[#414141] h-[2.5vh]">
-            <div className="bg-[#919191] h-full w-[50%]"></div>
-          </div>
-        </div>
+        ))}
       </div>
 
-      <div className='mt-10 bg-[#ebebeb] h-[17vh] text-black flex items-center justify-around text-[1.5rem] font-[500]'>
-        <div className='flex flex-col items-center'>
-          <p>2+</p>
-          <p>Partners</p>
-        </div>
-        <div className='flex flex-col items-center'>
-          <p>13+</p>
-          <p>Projects Done</p>
-        </div>
-        <div className='flex flex-col items-center'>
-          <p>1+</p>
-          <p>Jobs</p>
-        </div>
-        <div className='flex flex-col items-center'>
-          <p>1+</p>
-          <p>Years of Exp.</p>
-        </div>
+      {/* Stats */}
+      <div className="mt-12 bg-[#ebebeb] text-black grid grid-cols-2 sm:grid-cols-4 gap-6 py-8 text-center">
+        {[
+          ["2+", "Partners"],
+          ["13+", "Projects Done"],
+          ["1+", "Jobs"],
+          ["1+", "Years of Exp."],
+        ].map(([value, label]) => (
+          <div key={label}>
+            <p className="text-xl sm:text-2xl font-semibold">{value}</p>
+            <p className="text-sm sm:text-base">{label}</p>
+          </div>
+        ))}
       </div>
 
-      <div className='border w-fit flex items-center px-6 py-4 mt-10 cursor-pointer group hover:bg-white'>
-        <FontAwesomeIcon icon={faDownload} className="text-[2rem] group-hover:text-black" />
-        <p className='text-[1.5rem] group-hover:text-black'>Download Resume</p>
+      {/* Download */}
+      <div className="mt-10">
+        <button className="border flex items-center gap-3 px-6 py-4 group hover:bg-white transition">
+          <FontAwesomeIcon
+            icon={faDownload}
+            className="text-xl group-hover:text-black"
+          />
+          <span className="text-base sm:text-lg group-hover:text-black">
+            Download Resume
+          </span>
+        </button>
       </div>
 
-      <p className='text-[3rem] text-[#f1f1f1] pt-8'>My Price</p>
+{/* Pricing */}
+<p className="text-2xl sm:text-3xl lg:text-[3rem] text-[#f1f1f1] mt-16 mb-6">
+  My Pricing
+</p>
 
-      <div className='flex justify-between gap-4'>
-        <div className='mt-5 w-1/2 group'>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  {[
+    {
+      title: "Full-Time",
+      price: "N200,000",
+      duration: "per month",
+      hours: "30+ hrs weekly",
+    },
+    {
+      title: "Contract",
+      price: "N400,000",
+      duration: "per project",
+      hours: "Flexible Hours",
+    },
+  ].map((plan) => (
+    <div key={plan.title} className="group">
+      {/* Header */}
+      <p className="
+        flex items-center justify-center text-xl font-semibold h-20
+        bg-[#616161] lg:bg-[#414141]
+        lg:group-hover:bg-[#616161]
+        transition
+      ">
+        {plan.title}
+      </p>
 
-          <p className='flex items-center justify-center text-[2rem] font-[500] bg-[#414141] h-[20vh] group-hover:bg-[#616161]'>Full-Time</p>
+      {/* Features */}
+      {["Frontend Developer", "Physical Contact", plan.hours].map((item) => (
+        <p
+          key={item}
+          className="
+            flex items-center justify-center text-base text-black h-14 border-b
+            bg-[#ebebeb] lg:bg-[#919191]
+            lg:group-hover:bg-[#ebebeb]
+            transition
+          "
+        >
+          {item}
+        </p>
+      ))}
 
-          <p className='flex items-center justify-center text-[1.7rem] text-black bg-[#919191] h-[12vh] border-b group-hover:bg-[#ebebeb]'>Frontend Developer</p>
-
-          <p className='flex items-center justify-center text-[1.7rem] text-black bg-[#919191] h-[12vh] border-b group-hover:bg-[#ebebeb]'>Physical Contact</p>
-
-          <p className='flex items-center justify-center text-[1.7rem] text-black bg-[#919191] h-[12vh] border-b group-hover:bg-[#ebebeb]'>30+ hrs weekly</p>
-
-          <div className='flex flex-col items-center justify-center text-black bg-[#919191] h-[18vh] border-b group-hover:bg-[#ebebeb]'>
-            <p className='text-[1.7rem]'>N200,000</p>
-            <p>per month</p>
-          </div>
-
-          <div className='flex justify-center items-center h-[16vh] bg-[#818181] group-hover:bg-[#ababab]'>
-            <button className='text-black text-[1.2rem] px-6 py-3 bg-[#919191] cursor-pointer group-hover:bg-[#ebebeb] hover:bg-black hover:text-white'>Sign up</button>
-          </div>
-        </div>
-
-
-
-        <div className='mt-5 w-1/2 group'>
-
-          <p className='flex items-center justify-center text-[2rem] font-[500] bg-[#414141] h-[20vh] group-hover:bg-[#616161]'>Contract</p>
-
-          <p className='flex items-center justify-center text-[1.7rem] text-black bg-[#919191] h-[12vh] border-b group-hover:bg-[#ebebeb]'>Frontend Developer</p>
-
-          <p className='flex items-center justify-center text-[1.7rem] text-black bg-[#919191] h-[12vh] border-b group-hover:bg-[#ebebeb]'>Physical Contact</p>
-
-          <p className='flex items-center justify-center text-[1.7rem] text-black bg-[#919191] h-[12vh] border-b group-hover:bg-[#ebebeb]'>Flexible Hours</p>
-
-          <div className='flex flex-col items-center justify-center text-black bg-[#919191] h-[18vh] border-b group-hover:bg-[#ebebeb]'>
-            <p className='text-[1.7rem]'>N400,000</p>
-            <p>per project</p>
-          </div>
-
-          <div className='flex justify-center items-center h-[16vh] bg-[#818181] group-hover:bg-[#ababab]'>
-            <button className='text-black text-[1.2rem] px-6 py-3 bg-[#919191] cursor-pointer group-hover:bg-[#ebebeb] hover:bg-black hover:text-white'>Sign up</button>
-          </div>
-        </div>
+      {/* Price */}
+      <div
+        className="
+          flex flex-col items-center justify-center text-black h-20 border-b
+          bg-[#ebebeb] lg:bg-[#919191]
+          lg:group-hover:bg-[#ebebeb]
+          transition
+        "
+      >
+        <p className="text-lg">{plan.price}</p>
+        <p>{plan.duration}</p>
       </div>
 
+      {/* Button area */}
+      <div
+        className="
+          flex justify-center items-center h-20
+          bg-[#ababab] lg:bg-[#818181]
+          lg:group-hover:bg-[#ababab]
+          transition
+        "
+      >
+        <button className="text-black text-sm px-6 py-3 bg-[#919191] hover:bg-black hover:text-white transition">
+          Sign up
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
 
 
 
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
