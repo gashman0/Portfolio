@@ -12,10 +12,10 @@ import { faCode, faCodeBranch, faCodeCommit, faCodePullRequest } from "@fortawes
 
 const MainLayout = () => {
   return (
-    <div className="flex h-screen bg-[#000000]">
+    <div className="flex h-screen bg-[#000000] p-6">
 
       {/* LEFT NAV */}
-      <div className="bg-[#222222] text-[#ffffff] w-[9.5vw] flex flex-col text-xl font-bold">
+      <div className="bg-[#222222] text-[#ffffff] w-[9.5vw] flex flex-col text-xl font-bold hidden lg:block border-4 border-red-500">
         <div className='w-full h-[23vh]'>
           <img src="/Hero2.jpg" alt="" className='h-full'/>
           
@@ -42,7 +42,7 @@ const MainLayout = () => {
       </div>
 
       {/* RIGHT SCROLLABLE CONTENT */}
-      <div id="scroll-container" className="w-[90.5vw] overflow-y-scroll scroll-smooth no-scrollbar px-30">
+      <div id="scroll-container" className="w-full overflow-y-scroll scroll-smooth no-scrollbar">
         <Home />
         <About />
         <Works />
