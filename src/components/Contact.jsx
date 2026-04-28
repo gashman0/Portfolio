@@ -14,7 +14,7 @@ import {
 
 const Contact = () => {
   return (
-    <div name="contact" className="px-6 pt-16 overflow-hidden">
+    <div name="contact" className="px-6 lg:pl-12 pt-16 overflow-hidden">
       {/* Content wrapper */}
       <div className="text-white">
         {/* Form */}
