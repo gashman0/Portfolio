@@ -1,12 +1,19 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import PriceCard from "./ui/PriceCard";
 
 const About = () => {
+  const handleFirstClick = () => {
+    console.log('You clicked the fulltime part')
+  }
+  const handleSecondClick = () => {
+    console.log('You clicked the contract part')
+  }
   return (
     <div
       name="about"
-      className="text-white px-6 lg:px-12 pt-16 overflow-hidden"
+      className="text-white px-6 pt-16 overflow-hidden"
     >
       {/* Name */}
       <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] text-[#f1f1f1] mb-6">
@@ -16,15 +23,18 @@ const About = () => {
       <hr className="w-32 sm:w-48 mb-8" />
 
       {/* About text */}
-      <p className="text-justify text-base sm:text-lg md:text-xl lg:text-[2rem] text-[#ebebeb] leading-relaxed">
-        Some text about me. Some text about me. I am lorem ipsum consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-        qui officia deserunt mollit anim id est laborum consectetur adipiscing
-        elit.
+      <p className="text-justify text-base sm:text-lg md:text-2xl text-[#ebebeb] leading-relaxed">
+        I started out building simple interfaces with React, and over the past
+        year that has grown into building full web applications used in real
+        environments. Right now, I work with a fintech startup where I
+        contribute to developing products that people actually rely on. That
+        experience has pushed me to think beyond just UI — into performance,
+        structure, and real-world usability. Outside of work, I build projects
+        like a job board and a crypto tracking app — not just for practice, but
+        to understand how real products are designed, built, and improved over
+        time. I’m currently expanding into backend development with Node.js so I
+        can take full ownership of the applications I build. I care about doing
+        things properly, writing clean code, and getting better every day.
       </p>
 
       {/* Skills */}
@@ -36,7 +46,8 @@ const About = () => {
         {[
           { name: "JavaScript", value: "82%" },
           { name: "TypeScript", value: "60%" },
-          { name: "React", value: "70%" },
+          { name: "React", value: "90%" },
+          { name: "NodeJs", value: "60%" },
           { name: "HTML, CSS, Tailwind", value: "90%" },
           { name: "Git & GitHub", value: "50%" },
         ].map((skill) => (
@@ -71,95 +82,43 @@ const About = () => {
 
       {/* Download */}
       <div className="mt-10">
-        <button className="border flex items-center gap-3 px-6 py-4 group hover:bg-white transition">
+        <button className="border flex items-center gap-3 px-6 py-4 group hover:bg-white transition cursor-pointer">
           <FontAwesomeIcon
             icon={faDownload}
             className="text-xl group-hover:text-black"
           />
-          <span className="text-base sm:text-lg group-hover:text-black">
-            Download Resume
+          <span className="text-base sm:text-lg group-hover:text-black cursor-pointer">
+            <a href="Agashi.pdf" target="_blank" rel="noopener noreferrer download">
+              Download Resume
+            </a>
+            {/* Download Resume */}
           </span>
         </button>
       </div>
 
-{/* Pricing */}
-<p className="text-2xl sm:text-3xl lg:text-[3rem] text-[#f1f1f1] mt-16 mb-6">
-  My Pricing
-</p>
-
-<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-  {[
-    {
-      title: "Full-Time",
-      price: "N200,000",
-      duration: "per month",
-      hours: "30+ hrs weekly",
-    },
-    {
-      title: "Contract",
-      price: "N400,000",
-      duration: "per project",
-      hours: "Flexible Hours",
-    },
-  ].map((plan) => (
-    <div key={plan.title} className="group">
-      {/* Header */}
-      <p className="
-        flex items-center justify-center text-xl font-semibold h-20
-        bg-[#616161] lg:bg-[#414141]
-        lg:group-hover:bg-[#616161]
-        transition
-      ">
-        {plan.title}
+      {/* Pricing */}
+      <p className="text-2xl sm:text-3xl lg:text-[3rem] text-[#f1f1f1] mt-16 mb-6">
+        My Pricing
       </p>
 
-      {/* Features */}
-      {["Frontend Developer", "Physical Contact", plan.hours].map((item) => (
-        <p
-          key={item}
-          className="
-            flex items-center justify-center text-base text-black h-14 border-b
-            bg-[#ebebeb] lg:bg-[#919191]
-            lg:group-hover:bg-[#ebebeb]
-            transition
-          "
-        >
-          {item}
-        </p>
-      ))}
-
-      {/* Price */}
-      <div
-        className="
-          flex flex-col items-center justify-center text-black h-20 border-b
-          bg-[#ebebeb] lg:bg-[#919191]
-          lg:group-hover:bg-[#ebebeb]
-          transition
-        "
-      >
-        <p className="text-lg">{plan.price}</p>
-        <p>{plan.duration}</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <PriceCard 
+          title={'Full-Time'}
+          skill={'Fullstack Developer'}
+          reach={'Hybrid'}
+          hours={'30+ hours weekly'}
+          price={'250k monthly'}
+          onClick={handleFirstClick}
+        />
+        <PriceCard 
+          title={'Contract'}
+          skill={'Fullstack Developer'}
+          reach={'Remote'}
+          hours={'Flexible'}
+          price={'250k monthly'}
+          onClick={handleSecondClick}
+        />
       </div>
-
-      {/* Button area */}
-      <div
-        className="
-          flex justify-center items-center h-20
-          bg-[#ababab] lg:bg-[#818181]
-          lg:group-hover:bg-[#ababab]
-          transition
-        "
-      >
-        <button className="text-black text-sm px-6 py-3 bg-[#919191] hover:bg-black hover:text-white transition">
-          Sign up
-        </button>
-      </div>
-    </div>
-  ))}
-</div>
-
-
-
     </div>
   );
 };
