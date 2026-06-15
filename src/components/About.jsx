@@ -38,6 +38,7 @@ const About = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {[
           {name: "Rust", value: "30%"},
+          {name: "Node.js", value: "40%"},
           { name: "JavaScript", value: "82%" },
           { name: "TypeScript", value: "60%" },
           { name: "React", value: "70%" },
