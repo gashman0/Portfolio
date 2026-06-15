@@ -16,15 +16,18 @@ const About = () => {
       <hr className="w-32 sm:w-48 mb-8" />
 
       {/* About text */}
-      <p className="text-justify text-base sm:text-lg md:text-xl lg:text-[2rem] text-[#ebebeb] leading-relaxed">
-        Some text about me. Some text about me. I am lorem ipsum consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-        qui officia deserunt mollit anim id est laborum consectetur adipiscing
-        elit.
+      <p className="text-justify text-base sm:text-lg md:text-2xl text-[#ebebeb] leading-relaxed">
+        I started out building simple interfaces with Javascript and  React, and over the past two 
+        years I have grown into building full web applications used in real
+        environments. Currently, I work with a fintech startup where I
+        contribute to developing products that people actually rely on. That
+        experience has pushed me to think beyond just UI, I now look at performance,
+        structure, and real-world usability. Outside of work, I have built projects
+        like a job/career platform and a crypto tracking app, not just for practice, but
+        to understand how real products are designed, built, and improved over
+        time. I’m currently expanding into backend development with Node.js so I
+        can take full ownership of the applications I build. I care about doing
+        things properly, writing clean code, and getting better every day.
       </p>
 
       {/* Skills */}
@@ -34,6 +37,7 @@ const About = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {[
+          {name: "Rust", value: "30%"},
           { name: "JavaScript", value: "82%" },
           { name: "TypeScript", value: "60%" },
           { name: "React", value: "70%" },
