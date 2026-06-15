@@ -26,7 +26,7 @@ const Home = () => {
           I'm Gashman.
         </p>
         <p className="mt-2 sm:mt-3 text-base sm:text-lg md:text-xl text-gray-200">
-          Frontend Web Developer
+          Fullstack Developer
         </p>
       </div>
 
