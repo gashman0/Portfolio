@@ -24,13 +24,13 @@ const About = () => {
 
       {/* About text */}
       <p className="text-justify text-base sm:text-lg md:text-2xl text-[#ebebeb] leading-relaxed">
-        I started out building simple interfaces with React, and over the past
-        year that has grown into building full web applications used in real
-        environments. Right now, I work with a fintech startup where I
+        I started out building simple interfaces with Javascript and  React, and over the past two 
+        years I have grown into building full web applications used in real
+        environments. Currently, I work with a fintech startup where I
         contribute to developing products that people actually rely on. That
-        experience has pushed me to think beyond just UI — into performance,
-        structure, and real-world usability. Outside of work, I build projects
-        like a job board and a crypto tracking app — not just for practice, but
+        experience has pushed me to think beyond just UI, I now look at performance,
+        structure, and real-world usability. Outside of work, I have built projects
+        like a job/career platform and a crypto tracking app, not just for practice, but
         to understand how real products are designed, built, and improved over
         time. I’m currently expanding into backend development with Node.js so I
         can take full ownership of the applications I build. I care about doing
@@ -44,6 +44,7 @@ const About = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {[
+          {name: "Rust", value: "30%"},
           { name: "JavaScript", value: "82%" },
           { name: "TypeScript", value: "60%" },
           { name: "React", value: "90%" },
