@@ -1,5 +1,24 @@
 import React from "react";
 
+const projects = [
+  {
+    image: "/billstation.webp",
+    url: "https://www.thebillstation.com/",
+  },
+  {
+    image: "/fluxa.webp",
+    url: "https://fluxa.bond",
+  },
+  {
+    image: "/jobs-board.webp",
+    url: "https://jobsboards.netlify.app",
+  },
+  {
+    image: "/crypto-tracker.webp",
+    url: "https://crypto-tracke.netlify.app/",
+  },
+];
+
 const Works = () => {
   return (
     <div name="works" className="px-6 lg:pl-12 pt-16">
@@ -10,18 +29,13 @@ const Works = () => {
 
       {/* Projects grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {[
-          "/billstation.png",
-          "/digital-bank.png",
-          "/jobs-board.png",
-          "/crypto-tracker.png",
-        ].map((img, index) => (
+        {projects.map((project, index) => (
           <div
             key={index}
             className="relative group overflow-hidden rounded-lg shadow-lg"
           >
             <img
-              src={img}
+              src={project.image}
               alt="Project preview"
               className="
                 w-full h-full object-cover
@@ -32,7 +46,9 @@ const Works = () => {
             />
 
             <a
-              href="#"
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="
                 absolute bottom-4 left-1/2 -translate-x-1/2
                 bg-black/70 text-sm sm:text-base px-5 py-2
