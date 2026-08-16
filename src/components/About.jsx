@@ -156,7 +156,7 @@ const About = () => {
         "
       >
         <button className="text-black text-sm px-6 py-3 bg-[#919191] hover:bg-black hover:text-white transition">
-          Hire
+          Sign up
         </button>
       </div>
     </div>

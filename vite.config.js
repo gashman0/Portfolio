@@ -4,8 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   server: {
-    port: 5175,
-    strictPort: true,
     watch: {
       usePolling: true,
       interval: 100
