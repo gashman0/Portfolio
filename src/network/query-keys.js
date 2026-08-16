@@ -1,5 +1,0 @@
-// const queryKeys = {
-//     portfolio: {
-//         contacts: ['']
-//     }
-// }
