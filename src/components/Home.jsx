@@ -29,6 +29,11 @@ const Home = () => {
         <p className="mt-2 sm:mt-3 text-base sm:text-lg md:text-xl text-gray-200">
           Full-Stack Developer · Gashman
         </p>
+
+        <p className="mt-4 max-w-lg text-sm leading-relaxed text-gray-400 sm:text-base">
+          I build modern web applications and software with React, TypeScript,
+          Node.js, JavaScript and Rust.
+        </p>
       </div>
 
       {/* Image Section */}
