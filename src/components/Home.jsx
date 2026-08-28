@@ -22,11 +22,12 @@ const Home = () => {
     >
       {/* Text Section */}
       <div className="text-center lg:text-left max-w-xl">
-        <p className="text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight">
-          I'm Gashman.
-        </p>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-bold leading-tight">
+          Agashi Victor Tochukwu
+        </h1>
+
         <p className="mt-2 sm:mt-3 text-base sm:text-lg md:text-xl text-gray-200">
-          Fullstack Developer
+          Full-Stack Developer · Gashman
         </p>
       </div>
 
@@ -34,7 +35,7 @@ const Home = () => {
       <div className="mb-8 lg:mb-0 flex justify-center w-full lg:w-auto">
         <img
           src="/Hero2.jpg"
-          alt="Hero"
+          alt="Agashi Victor Tochukwu, also known as Gashman"
           className="
             h-[260px]
             sm:h-[320px]
