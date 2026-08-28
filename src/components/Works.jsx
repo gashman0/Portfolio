@@ -2,18 +2,30 @@ import React from "react";
 
 const projects = [
   {
+    name: "The Bill Station",
+    description:
+      "A fintech platform for sending money, paying bills, utilities, and subscriptions.",
     image: "/billstation.webp",
     url: "https://www.thebillstation.com/",
   },
   {
+    name: "Fluxa",
+    description:
+      "A jobs board that aggregates job opportunities from multiple platforms into one place.",
     image: "/fluxa.webp",
     url: "https://fluxa.bond",
   },
   {
+    name: "Jobs Board",
+    description:
+      "A job board application where users can post, edit, apply for, and delete jobs.",
     image: "/jobs-board.webp",
     url: "https://jobsboards.netlify.app",
   },
   {
+    name: "Crypto Tracker",
+    description:
+      "A cryptocurrency tracking application for monitoring cryptocurrency prices.",
     image: "/crypto-tracker.webp",
     url: "https://crypto-tracke.netlify.app/",
   },
@@ -21,46 +33,80 @@ const projects = [
 
 const Works = () => {
   return (
-    <div name="works" className="px-6 lg:pl-12 pt-16">
+    <section
+      id="works"
+      name="works"
+      className="min-h-screen bg-black px-6 pt-16 pb-20 lg:pl-12"
+    >
       {/* Heading */}
-      <p className="text-2xl sm:text-3xl lg:text-[3rem] text-[#f1f1f1] mb-8 w-fit">
-        My Projects
-      </p>
+      <div className="mb-8">
+        <h2 className="text-2xl font-normal text-white sm:text-3xl lg:text-[3rem]">
+          Projects by Agashi Victor Tochukwu
+        </h2>
 
-      {/* Projects grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="relative group overflow-hidden rounded-lg shadow-lg"
+        <p className="mt-2 text-sm text-gray-400 sm:text-base">
+          Some of the things I've built.
+        </p>
+      </div>
+
+      {/* Projects */}
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        {projects.map((project) => (
+          <article
+            key={project.name}
+            className="overflow-hidden rounded-md border border-[#222] bg-[#111]"
           >
-            <img
-              src={project.image}
-              alt="Project preview"
-              className="
-                w-full h-full object-cover
-                opacity-100 lg:opacity-60
-                lg:group-hover:opacity-100
-                transition duration-500
-              "
-            />
+            {/* Project Image */}
+            <div className="h-[220px] w-full overflow-hidden sm:h-[260px]">
+              <img
+                src={project.image}
+                alt={`${project.name} project by Agashi Victor Tochukwu`}
+                className="h-full w-full object-cover"
+              />
+            </div>
 
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                absolute bottom-4 left-1/2 -translate-x-1/2
-                bg-black/70 text-sm sm:text-base px-5 py-2
-                hover:bg-black/90 transition text-white rounded-md
-              "
-            >
-              View More
-            </a>
-          </div>
+            {/* Project Details */}
+            <div className="p-5 sm:p-6">
+              <h3 className="text-xl font-normal text-white sm:text-2xl">
+                {project.name}
+              </h3>
+
+              <p className="mt-3 max-w-xl text-sm leading-7 text-gray-300 sm:text-base">
+                {project.description}
+              </p>
+
+              {/* View Project */}
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  mt-5
+                  inline-flex
+                  items-center
+                  gap-2
+                  rounded-md
+                  border
+                  border-gray-500
+                  px-4
+                  py-2
+                  text-sm
+                  font-semibold
+                  text-yellow-500
+                  transition
+                  hover:bg-gray-500
+                  hover:text-black
+                  sm:text-base
+                "
+              >
+                View Project
+                {/* <span aria-hidden="true">↗</span> */}
+              </a>
+            </div>
+          </article>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
