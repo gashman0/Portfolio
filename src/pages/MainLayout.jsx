@@ -19,7 +19,7 @@ const MainLayout = () => {
       <aside className="hidden lg:flex bg-[#222222] text-white w-[9.5vw] flex-col text-sm font-semibold">
         {/* Image */}
         <div className="w-full h-[23vh]">
-          <img src="/Hero2.jpg" alt="Hero" className="h-full w-full object-cover" />
+          <img src="/Hero2.jpg" alt="Agashi Victor Tochukwu, also known as Gashman" className="h-full w-full object-cover" />
         </div>
 
         {/* Links */}
